@@ -1,0 +1,18 @@
+<!-- templates/modify_enrollment.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify Enrollment</title>
+</head>
+<body>
+    <h1>Modify Enrollment</h1>
+    <form action="{{ url_for('modify_enrollment', enrollment_id=enrollment.id) }}" method="post">
+        <label for="student_name">Student Name:</label>
+        <input type="text" name="student_name" value="{{ enrollment.student_name }}" required>
+        <button type="submit">Save Changes</button>
+    </form>
+</body>
+</html>
